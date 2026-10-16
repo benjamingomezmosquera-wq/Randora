@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>RANDORA — Emprendimiento</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body data-theme="violet">
+<header class="topbar">
+  <a class="brand" href="#inicio" aria-label="RANDORA inicio">
+    <img src="assets/logo.jpeg" alt="Logo RANDORA">
+  </a>
+  <nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#productos">Productos</a>
+    <a href="#nosotros">RANDORA</a>
+  </nav>
+  <button class="cart-button" id="openCart">🛒 <span>Carrito</span><b id="cartCount">0</b></button>
+</header>
+
+<main>
+<section class="hero" id="inicio">
+  <div class="hero-copy">
+    <span class="eyebrow">EMPRENDIMIENTO · RANDORA</span>
+    <h1>Encontrá algo que<br><span>no sabías que necesitabas.</span></h1>
+    <p>Una tienda con productos curiosos, útiles y originales. Explorá el catálogo y armá tu carrito.</p>
+    <div class="hero-actions">
+      <a class="btn primary" href="#productos">Ver productos</a>
+      <a class="btn ghost" href="#nosotros">Conocer RANDORA</a>
+    </div>
+  </div>
+  <div class="hero-card">
+    <div class="hero-logo-ring"><img src="assets/logo.jpeg" alt=""></div>
+    <strong>20 productos</strong>
+    <small>Catálogo RANDORA</small>
+  </div>
+</section>
+
+<section class="theme-panel">
+  <div>
+    <strong>Elegí el estilo de RANDORA</strong>
+    <small>Cambiá el color de toda la página cuando quieras.</small>
+  </div>
+  <div class="themes" role="group" aria-label="Temas de color">
+    <button class="theme-dot violet active" data-theme="violet" title="Violeta"></button>
+    <button class="theme-dot blue" data-theme="blue" title="Azul"></button>
+    <button class="theme-dot gold" data-theme="gold" title="Amarillo / dorado"></button>
+    <button class="theme-dot mono" data-theme="mono" title="Blanco y negro"></button>
+  </div>
+</section>
+
+<section class="catalog" id="productos">
+  <div class="section-heading">
+    <div>
+      <span class="eyebrow">CATÁLOGO</span>
+      <h2>Todos nuestros productos</h2>
+    </div>
+    <div class="controls">
+      <input id="search" type="search" placeholder="Buscar producto...">
+      <select id="sort">
+        <option value="default">Ordenar</option>
+        <option value="low">Precio: menor a mayor</option>
+        <option value="high">Precio: mayor a menor</option>
+        <option value="name">Nombre A-Z</option>
+      </select>
+    </div>
+  </div>
+  <div class="filters" id="filters">
+    <button class="filter active" data-filter="all">Todos</button>
+    <button class="filter" data-filter="Centro">Centro</button>
+    <button class="filter" data-filter="Norte">Norte</button>
+    <button class="filter" data-filter="Sur">Sur</button>
+  </div>
+  <div class="grid" id="productGrid"></div>
+</section>
+
+<section class="info" id="nosotros">
+  <div class="info-main">
+    <span class="eyebrow">SOBRE RANDORA</span>
+    <h2>Una tienda pensada para descubrir cosas distintas.</h2>
+    <p>RANDORA está dirigida directamente al público de mediana edad, según la información del emprendimiento. La promoción se plantea principalmente en plataformas de entretenimiento y redes sociales.</p>
+  </div>
+  <div class="info-cards">
+    <article><span>⭐</span><h3>Producto a promocionar</h3><p>El clarinete, por ser un producto poco conocido y con un precio conveniente.</p></article>
+    <article><span>💎</span><h3>Más económico</h3><p>Anillos — <b>$2.250</b>.</p></article>
+    <article><span>👑</span><h3>Más caro</h3><p>Peluche de ADO — <b>$21.000</b>.</p></article>
+  </div>
+</section>
+</main>
+
+<footer>
+  <img src="assets/logo.jpeg" alt="RANDORA">
+  <p>RANDORA · Catálogo de emprendimiento</p>
+</footer>
+
+<div class="overlay" id="overlay"></div>
+<aside class="cart" id="cart">
+  <div class="cart-head"><h2>Tu carrito</h2><button id="closeCart">✕</button></div>
+  <div id="cartItems" class="cart-items"></div>
+  <div class="cart-bottom">
+    <div><span>Total</span><strong id="cartTotal">$0</strong></div>
+    <button class="btn primary full" id="checkout">Finalizar pedido</button>
+    <small>Demo de tienda: el botón prepara un resumen del pedido.</small>
+  </div>
+</aside>
+
+<script src="app.js"></script>
+</body>
+</html>
